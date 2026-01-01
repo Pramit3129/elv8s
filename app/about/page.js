@@ -2,7 +2,7 @@
 
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { Chatbot } from "@/components/features/Chatbot";
+// import { Chatbot } from "@/components/features/Chatbot";
 import { FadeIn, SlideUp } from "@/components/ui/Motion";
 import { Quote } from "lucide-react";
 
@@ -73,7 +73,7 @@ export default function About() {
             </section>
 
             <Footer />
-            <Chatbot />
+            {/* <Chatbot /> */}
         </main>
     );
 }

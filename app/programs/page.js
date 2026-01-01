@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { Chatbot } from "@/components/features/Chatbot";
+// import { Chatbot } from "@/components/features/Chatbot";
 import { Button } from "@/components/ui/Button";
 import { Check, ArrowRight, Sparkles, BarChart3, BookOpen, Layers } from "lucide-react";
 import { FadeIn, SlideUp, ScaleIn } from "@/components/ui/Motion";
@@ -217,7 +217,7 @@ export default function Programs() {
             </section >
 
             <Footer />
-            <Chatbot />
+            {/* <Chatbot /> */}
         </main >
     );
 }

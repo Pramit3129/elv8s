@@ -2,7 +2,7 @@
 
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { Chatbot } from "@/components/features/Chatbot";
+// import { Chatbot } from "@/components/features/Chatbot";
 import { Button } from "@/components/ui/Button";
 import { Input, Select, Checkbox } from "@/components/ui/Input";
 import { Mail, MapPin, MessageSquare, ArrowRight } from "lucide-react";
@@ -12,6 +12,15 @@ import { useState } from "react";
 
 export default function Contact() {
     const [status, setStatus] = useState({ loading: false, success: false, error: null });
+    const [phone, setPhone] = useState("");
+
+    const handlePhoneChange = (e) => {
+        const value = e.target.value;
+        // Allow only numbers, spaces, +, -, (, )
+        if (/^[0-9\s+\-()]*$/.test(value)) {
+            setPhone(value);
+        }
+    };
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -27,6 +36,12 @@ export default function Contact() {
             message: formData.get("message"),
             contactTime: formData.get("contactTime")
         };
+
+        // Basic phone validation if provided
+        if (data.phone && data.phone.replace(/[^0-9]/g, "").length < 10) {
+            setStatus({ loading: false, success: false, error: "Please enter a valid phone number (at least 10 digits)" });
+            return;
+        }
 
         try {
             const res = await fetch("/api/contact", {
@@ -76,7 +91,13 @@ export default function Contact() {
 
                                 <div className="space-y-2">
                                     <label className="text-xs font-bold text-primary-900 uppercase tracking-wider ml-1">Phone (Optional)</label>
-                                    <Input name="phone" type="tel" placeholder="+1 (555) 000-0000" />
+                                    <Input
+                                        name="phone"
+                                        type="tel"
+                                        placeholder="+1 (555) 000-0000"
+                                        value={phone}
+                                        onChange={handlePhoneChange}
+                                    />
                                 </div>
 
                                 <div className="space-y-2">
@@ -181,7 +202,7 @@ export default function Contact() {
                                 </div>
 
                                 {/* Bottom: Chat section */}
-                                <div className="pt-12 mt-8 border-t border-white/10">
+                                {/* <div className="pt-12 mt-8 border-t border-white/10">
                                     <h4 className="text-white text-xl mb-6">Chat Live With ELV8S</h4>
                                     <p className="text-white/70 mb-6 font-light">
                                         Prefer quick answers? Use our chatbot to ask about pricing, formats, or choosing a track.
@@ -193,7 +214,7 @@ export default function Contact() {
                                     <p className="text-white/40 text-xs mt-4 italic">
                                         Type: "Help me pick a program."
                                     </p>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </FadeIn>
@@ -201,7 +222,7 @@ export default function Contact() {
             </section>
 
             <Footer />
-            <Chatbot />
+            {/* <Chatbot /> */}
         </main>
     );
 }

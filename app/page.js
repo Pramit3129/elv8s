@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Card } from "@/components/ui/Card";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { Chatbot } from "@/components/features/Chatbot";
+// import { Chatbot } from "@/components/features/Chatbot";
 import { ChatTrigger } from "@/components/features/ChatTrigger";
 import { Button } from "@/components/ui/Button";
 import { Check, ArrowRight, Sparkles, BarChart3, BookOpen, Layers, Target, Lightbulb, CheckCircle2, GraduationCap, Briefcase, RefreshCw, TrendingUp, Users, ChevronRight, Cpu } from "lucide-react";
@@ -382,7 +382,7 @@ export default function Home() {
             </section>
 
             <Footer />
-            <Chatbot />
+            {/* <Chatbot /> */}
         </main>
     );
 }
