@@ -139,7 +139,19 @@ export default function Contact() {
 
                                 <div className="space-y-2">
                                     <label className="text-xs font-bold text-primary-900 uppercase tracking-wider ml-1">Preferred Contact Time (Optional)</label>
-                                    <Input name="contactTime" placeholder="e.g. Weekday mornings" />
+                                    <Select name="contactTime">
+                                        <option value="">Select a time...</option>
+                                        <option value="09:00 AM - 10:00 AM">09:00 AM - 10:00 AM</option>
+                                        <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+                                        <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
+                                        <option value="12:00 PM - 01:00 PM">12:00 PM - 01:00 PM</option>
+                                        <option value="01:00 PM - 02:00 PM">01:00 PM - 02:00 PM</option>
+                                        <option value="02:00 PM - 03:00 PM">02:00 PM - 03:00 PM</option>
+                                        <option value="03:00 PM - 04:00 PM">03:00 PM - 04:00 PM</option>
+                                        <option value="04:00 PM - 05:00 PM">04:00 PM - 05:00 PM</option>
+                                        <option value="05:00 PM - 06:00 PM">05:00 PM - 06:00 PM</option>
+                                        <option value="After 06:00 PM">After 06:00 PM</option>
+                                    </Select>
                                 </div>
 
                                 {status.error && (

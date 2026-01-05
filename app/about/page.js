@@ -2,7 +2,6 @@
 
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-// import { Chatbot } from "@/components/features/Chatbot";
 import { FadeIn, SlideUp } from "@/components/ui/Motion";
 import { Quote } from "lucide-react";
 
@@ -15,7 +14,7 @@ export default function About() {
             <section className="pt-40 pb-10 border-b border-neutral-100">
                 <div className="container mx-auto px-6 md:px-12 text-center">
                     <SlideUp>
-                        <h1 className="mb-6 text-balance">About the Founder</h1>
+                        <h1 className="mb-6 text-balance">Meet Our Team </h1>
                         <p className="text-xl text-neutral-600 max-w-2xl mx-auto font-light leading-relaxed">
                             Bridging the gap between academic theory and corporate reality.
                         </p>
@@ -23,14 +22,14 @@ export default function About() {
                 </div>
             </section>
 
-            {/* Bio Section */}
+            {/* Bio Section - Vaibhav */}
             <section className="pt-10 pb-24">
                 <div className="container mx-auto px-6 md:px-12">
                     <div className="grid lg:grid-cols-12 gap-12 items-center">
                         {/* Image Side */}
-                        <div className="lg:col-span-5">
+                        <div className="lg:col-span-4">
                             <FadeIn>
-                                <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl shadow-primary-900/10 border border-neutral-100 aspect-[4/5]">
+                                <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl shadow-primary-900/10 border border-neutral-100 aspect-[4/5] max-w-md mx-auto">
                                     <img
                                         src="/images/VaibhavPhoto.jpeg"
                                         alt="Vaibhav Kesri"
@@ -42,7 +41,7 @@ export default function About() {
                         </div>
 
                         {/* Content Side */}
-                        <div className="lg:col-span-7">
+                        <div className="lg:col-span-8">
                             <SlideUp delay={0.2}>
                                 <h2 className="text-4xl font-heading font-bold text-primary-900 mb-8">
                                     Vaibhav Kesri <span className="text-primary-900/40 font-light">(Vaib)</span>
@@ -64,6 +63,55 @@ export default function About() {
                                     <Quote className="w-10 h-10 text-accent-500 absolute -top-5 -left-2 bg-white rounded-full p-2 shadow-sm border border-neutral-100" />
                                     <p className="text-primary-900 font-medium italic text-xl leading-relaxed">
                                         "My mission is to equip the next generation of leaders with the practical tools and mindset they need to not just survive, but excel from day one."
+                                    </p>
+                                </div>
+                            </SlideUp>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Bio Section - Vipin */}
+            <section className="pb-24">
+                <div className="container mx-auto px-6 md:px-12">
+                    <div className="grid lg:grid-cols-12 gap-12 items-center">
+                        {/* Image Side */}
+                        <div className="lg:col-span-4 lg:order-last">
+                            <FadeIn>
+                                <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl shadow-primary-900/10 border border-neutral-100 aspect-[4/5] max-w-md mx-auto">
+                                    <img
+                                        src="/images/Vipin.jpeg"
+                                        alt="Vipin Garg"
+                                        className="absolute inset-0 w-full h-full object-cover"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-primary-950/40 to-transparent" />
+                                </div>
+                            </FadeIn>
+                        </div>
+
+                        {/* Content Side */}
+                        <div className="lg:col-span-8">
+                            <SlideUp delay={0.2}>
+                                <h2 className="text-4xl font-heading font-bold text-primary-900 mb-8">
+                                    Vipin Garg
+                                </h2>
+
+                                <div className="space-y-6 text-lg text-neutral-600 leading-relaxed font-light">
+                                    <p>
+                                        Vipin Garg is a seasoned finance and technology professional with over 15 years of experience spanning investment banking, capital markets, financial planning & analysis, and digital transformation.
+                                    </p>
+                                    <p>
+                                        Having worked across global financial institutions, consulting environments, and academic settings, Vipin brings a rare blend of real-world industry insight and structured academic rigor. As a CFA Charterholder, MBA (Finance), and experienced faculty member, he has guided students and professionals across Canada, Europe, and Asia through some of the most demanding finance certifications and career transitions.
+                                    </p>
+                                    <p>
+                                        He has mentored hundreds of aspiring finance professionals—helping them bridge the gap between textbook knowledge and the practical expectations of banks, investment firms, and corporate finance teams.
+                                    </p>
+                                </div>
+
+                                <div className="mt-12 p-8 bg-neutral-50 rounded-3xl border border-neutral-100 relative">
+                                    <Quote className="w-10 h-10 text-accent-500 absolute -top-5 -left-2 bg-white rounded-full p-2 shadow-sm border border-neutral-100" />
+                                    <p className="text-primary-900 font-medium italic text-xl leading-relaxed">
+                                        "My mission is to help finance professionals and students build real competence, confidence, and career clarity—so they can create long-term impact and succeed at every stage of their careers."
                                     </p>
                                 </div>
                             </SlideUp>

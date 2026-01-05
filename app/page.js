@@ -43,7 +43,7 @@ export default function Home() {
                                     <motion.div whileTap={{ scale: 0.95 }}>
                                         <Button size="lg" className="shadow-xl shadow-primary-900/10 font-heading tracking-tight flex items-center" asChild>
                                             <Link href="/contact">
-                                                Book a Free 20-Minute Consultation
+                                                Book a Free Consultation
                                             </Link>
                                         </Button>
                                     </motion.div>
@@ -55,10 +55,7 @@ export default function Home() {
                                         </Button>
                                     </motion.div>
                                 </div>
-                                <p className="text-sm text-neutral-500 mt-4 flex items-center gap-2 font-accent">
-                                    <span className="w-2 h-2 rounded-full bg-accent-500 animate-pulse" />
-                                    Need quick answers? Ask our ELV8S chatbot in the corner of your screen.
-                                </p>
+                                
                             </SlideUp>
                         </div>
 
@@ -176,7 +173,7 @@ export default function Home() {
                     <div className="grid md:grid-cols-2 gap-20 items-center">
                         <SlideUp>
                             <h2 className="text-white mb-8 leading-tight">Our Mission</h2>
-                            <p className="text-xl text-neutral-300 text-white mb-8 font-light leading-relaxed">
+                            <p className="text-xl text-white mb-8 font-light leading-relaxed">
                                 The mission of ELV8S is to translate and demystify the world of work so people at every career stage can:
                             </p>
                             <div className="space-y-6 mb-10">
